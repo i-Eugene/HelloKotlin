@@ -1,5 +1,6 @@
 package example.myapp.decor
 
+const val v1 = "sdf"
 fun main() {
     makeDecoration()
 //    println(Direction.EAST.name)
@@ -33,6 +34,7 @@ data class Decoration2(val rocks: String, val wood: String, val diver: String) {
 }
 
 data class Decoration(val rocks: String) {
+    val v2 = MyClass.C.v1
 }
 
 enum class Color(val color: Int) {
@@ -41,4 +43,10 @@ enum class Color(val color: Int) {
 
 enum class Direction(val degrees: Int) {
     NORTH(0), SOUTH(180), EAST(90), WEST(270)
+}
+
+class MyClass {
+    companion object C {
+        const val v1 = "v1"
+    }
 }

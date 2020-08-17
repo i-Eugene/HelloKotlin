@@ -45,10 +45,11 @@ sealed class Seal {
 
     class Walrus : Seal()
 
-    fun matchSeal(val seal: Seal): String {
+    fun matchSeal(seal: Seal): String {
         when (seal) {
-            is Sealion -> "sea lion"
-            is Walrus -> "walrus"
+            is Sealion -> return "sea lion"
+            is Walrus -> return "walrus"
+            else -> return ""
         }
     }
 }
